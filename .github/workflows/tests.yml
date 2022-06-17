@@ -19,6 +19,7 @@ jobs:
     env:
       # Switch to enable compatibility with older versions of macOS.
       SYSTEM_VERSION_COMPAT: 1
+      MACOSX_DEPLOYMENT_TARGET: 10.16
 
     steps:
 
