@@ -45,9 +45,6 @@ function main() {
   pip install --upgrade wheel
   pip install "zc.buildout>=2,<3"
 
-  # Switch to enable compatibility with older versions of macOS.
-  # export SYSTEM_VERSION_COMPAT=1
-
   buildout -v -n -c base.cfg
 
 }
