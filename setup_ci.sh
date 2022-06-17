@@ -43,7 +43,7 @@ function main() {
   python -m pip install --upgrade pip
 
   pip install --upgrade wheel
-  pip install "zc.buildout>=2,<3"
+  pip install --upgrade --pre "zc.buildout==3.0.0rc3"
 
   buildout -vv -n -c base.cfg
 
