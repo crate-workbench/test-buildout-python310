@@ -1,0 +1,6 @@
+/.venv*
+/bin
+/develop-eggs
+/eggs
+.installed.cfg
+*.egg-info
