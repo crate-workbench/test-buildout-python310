@@ -45,7 +45,7 @@ function main() {
   pip install --upgrade wheel
   pip install "zc.buildout>=2,<3"
 
-  buildout -v -n -c base.cfg
+  buildout -vv -n -c base.cfg
 
 }
 
