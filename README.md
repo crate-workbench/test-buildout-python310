@@ -1,4 +1,4 @@
-# test-buildout-python310-macos
+# test-buildout-python310
 
 
 ## About
@@ -25,4 +25,4 @@ buildout -vvv -n -c base.cfg
 
 ## Discussion
 
-See https://github.com/crate-workbench/test-buildout-python310-macos/issues/1.
+See https://github.com/crate-workbench/test-buildout-python310/issues/1.
