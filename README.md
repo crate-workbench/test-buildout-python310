@@ -1,4 +1,4 @@
-# test-gha-macos-buildout-sqlalchemy
+# test-buildout-python310-macos
 
 
 ## About
@@ -25,4 +25,4 @@ buildout -vvv -n -c base.cfg
 
 ## Discussion
 
-See https://github.com/crate-workbench/test-gha-macos-buildout-sqlalchemy/issues/1.
+See https://github.com/crate-workbench/test-buildout-python310-macos/issues/1.
