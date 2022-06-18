@@ -7,7 +7,7 @@ on:
 
 jobs:
   tests:
-    name: Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    name: Python ${{ matrix.python-version }} on ${{ matrix.os }}, Buildout ${{ matrix.buildout-version }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -15,9 +15,9 @@ jobs:
       matrix:
         os: [ 'macos-10.15', 'macos-11', 'macos-12' ]
         python-version: [ '3.9', '3.10' ]
-        sqla-version: ['1.3.24', '1.4.37']
+        buildout-version: ['2.13.7', '3.0.0rc3']
     env:
-      # Switch to enable compatibility with older versions of macOS.
+      # Switches to enable compatibility with older versions of macOS.
       SYSTEM_VERSION_COMPAT: 1
       MACOSX_DEPLOYMENT_TARGET: 10.16
 
@@ -36,6 +36,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Setup CI environment
+      - name: Setup environment and run Buildout
         run: |
-          ./setup_ci.sh --sqlalchemy-version=${{ matrix.sqla-version }}
+          python -m pip install --upgrade pip
+          pip install --upgrade wheel
+          pip install --upgrade --pre "zc.buildout==${{ matrix.buildout-version }}"
+          buildout -vv -n -c base.cfg
