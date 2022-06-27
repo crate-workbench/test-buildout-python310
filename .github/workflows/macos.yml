@@ -38,6 +38,7 @@ jobs:
 
       - name: Setup environment and run Buildout
         run: |
+          sudo xcode-select -switch /Library/Developer/CommandLineTools
           python -m pip install --upgrade pip
           pip install --upgrade wheel
           pip install --upgrade --pre "zc.buildout==${{ matrix.buildout-version }}"
