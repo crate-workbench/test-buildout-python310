@@ -7,5 +7,5 @@ setup(
     name='test-buildout-python310',
     version='0.0.0',
     url='https://github.com/crate-workbench/test-buildout-python310',
-    install_requires='sqlalchemy>=1.0,<1.5',
+    install_requires='sqlalchemy[asyncio]>=1.0,<1.5',
 )
