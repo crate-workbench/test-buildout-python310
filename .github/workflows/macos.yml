@@ -17,9 +17,7 @@ jobs:
         python-version: [ '3.9', '3.10' ]
         buildout-version: ['2.13.7', '3.0.0rc3']
     env:
-      # Switches to enable compatibility with older versions of macOS.
-      SYSTEM_VERSION_COMPAT: 1
-      MACOSX_DEPLOYMENT_TARGET: 10.16
+      SETUPTOOLS_USE_DISTUTILS: stdlib
 
     steps:
 
@@ -41,4 +39,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade wheel
           pip install --upgrade --pre "zc.buildout==${{ matrix.buildout-version }}"
-          buildout -vv -n -c base.cfg
+          =stdlib buildout -vv -n -c base.cfg
