@@ -16,10 +16,6 @@ jobs:
         os: [ 'macos-10.15', 'macos-11', 'macos-12' ]
         python-version: [ '3.9', '3.10' ]
         buildout-version: ['2.13.7', '3.0.0rc3']
-    env:
-      # Switches to enable compatibility with older versions of macOS.
-      SYSTEM_VERSION_COMPAT: 1
-      MACOSX_DEPLOYMENT_TARGET: 10.16
 
     steps:
 
